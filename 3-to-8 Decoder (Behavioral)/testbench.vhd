@@ -1,4 +1,4 @@
---https://www.edaplayground.com/x/Gfkw
+use std.env.stop;
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -28,8 +28,15 @@ begin
         Input(1) <= not Input(1);
     end process;
 
-    process begin
+    process
+        variable cnt : integer := 2;
+    begin
         wait for 40 ns;
         Input(2) <= not Input(2);
+        cnt := cnt-1;
+        if cnt = 0 then
+            wait for 1 ns;
+            stop;
+        end if;
     end process;
 end TestBench;
