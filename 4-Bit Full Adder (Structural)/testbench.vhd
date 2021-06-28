@@ -1,4 +1,3 @@
-use std.env.finish;
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -27,16 +26,6 @@ begin
     process begin wait for 2 ns; B(0) <= not B(0); end process;
     process begin wait for 4 ns; B(1) <= not B(1); end process;
     process begin wait for 8 ns; B(2) <= not B(2); end process;
-    process 
-        variable cnt : integer := 2;
-    begin 
-        wait for 16 ns;
-        B(3) <= not B(3);
-        cnt := cnt-1;
-        if cnt=0 then
-            wait for 1 ns;
-            finish;
-        end if;
-    end process;
+    process begin wait for 16 ns; B(3) <= not B(3); end process;
 
 end TestBench;

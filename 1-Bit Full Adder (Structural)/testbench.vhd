@@ -11,7 +11,7 @@ architecture TestBench of TestBench is
             C_out, Sum : out std_logic);
     end component;
 
-    signal X, Y, C_in : std_logic;
+    signal X, Y, C_in : std_logic := '0';
     signal C_out, Sum : std_logic;
 
 begin
@@ -21,15 +21,18 @@ begin
         C_out => C_out, Sum => Sum);
 
     process begin
-        X <= '0'; Y <='0'; C_in <= '0'; wait for 1 ns;
-        X <= '0'; Y <='0'; C_in <= '1'; wait for 1 ns;
-        X <= '0'; Y <='1'; C_in <= '0'; wait for 1 ns;
-        X <= '0'; Y <='1'; C_in <= '1'; wait for 1 ns;
-        X <= '1'; Y <='0'; C_in <= '0'; wait for 1 ns;
-        X <= '1'; Y <='0'; C_in <= '1'; wait for 1 ns;
-        X <= '1'; Y <='1'; C_in <= '0'; wait for 1 ns;
-        X <= '1'; Y <='1'; C_in <= '1'; wait for 1 ns;
-        wait;
+        wait for 4 ns;
+        X <= not X;
+    end process;
+
+    process begin
+        wait for 2 ns;
+        Y <= not Y;
+    end process;
+
+    process begin
+        wait for 1 ns;
+        C_in <= not C_in;
     end process;
 
 end TestBench;
