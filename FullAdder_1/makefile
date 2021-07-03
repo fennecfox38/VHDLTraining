@@ -2,8 +2,8 @@ GHDL = ghdl
 WAVE = gtkwave
 STD = --std=08
 SRCS = $(notdir $(wildcard *.vhd))
-TARGET = TestBench
-STOP = 
+TARGET = TB_FullAdder_1
+STOP = --stop-time=8ns
 
 $(TARGET).vcd: $(SRCS)
 	$(GHDL) -a $(STD) $(SRCS)

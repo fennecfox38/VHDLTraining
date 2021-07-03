@@ -2,8 +2,8 @@ GHDL = ghdl
 WAVE = gtkwave
 STD = --std=08
 SRCS = $(notdir $(wildcard *.vhd))
-TARGET = TestBench
-STOP = --stop-time=8ns
+TARGET = TB_MUX_4_1
+STOP = 
 
 $(TARGET).vcd: $(SRCS)
 	$(GHDL) -a $(STD) $(SRCS)

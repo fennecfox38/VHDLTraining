@@ -1,11 +1,11 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity TestBench is
-end TestBench;
+entity TB_FullAdder_1 is
+end TB_FullAdder_1;
 
-architecture TestBench of TestBench is
-    component FullAdder
+architecture TestBench of TB_FullAdder_1 is
+    component FullAdder_1
         port (
             X, Y, C_in : in std_logic;
             C_out, Sum : out std_logic);
@@ -16,7 +16,7 @@ architecture TestBench of TestBench is
 
 begin
 
-    dut : FullAdder port map(
+    dut : FullAdder_1 port map(
         X => X, Y => Y, C_in => C_in,
         C_out => C_out, Sum => Sum);
 

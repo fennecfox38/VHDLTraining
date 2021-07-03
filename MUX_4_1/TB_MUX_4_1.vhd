@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity TestBench is
-end TestBench;
+entity TB_MUX_4_1 is
+end TB_MUX_4_1;
 
-architecture TestBench of TestBench is
+architecture TestBench of TB_MUX_4_1 is
     component MUX_4_1 is
         port (
             Input  : in std_logic_vector(3 downto 0);

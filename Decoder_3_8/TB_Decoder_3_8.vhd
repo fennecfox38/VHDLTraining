@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity TestBench is
-end TestBench;
+entity TB_Decoder_3_8 is
+end TB_Decoder_3_8;
 
-architecture TestBench of TestBench is
+architecture TestBench of TB_Decoder_3_8 is
     component Decoder_3_8 is
         port (
             Input  : in std_logic_vector(2 downto 0);

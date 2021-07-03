@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity TestBench is
-end TestBench;
+entity TB_FullAdder_4 is
+end TB_FullAdder_4;
 
-architecture TestBench of TestBench is
+architecture TestBench of TB_FullAdder_4 is
     component FullAdder_4 is
         port (
             A, B : in std_logic_vector(3 downto 0);
@@ -16,8 +16,8 @@ architecture TestBench of TestBench is
     signal A : std_logic_vector(3 downto 0) := "0110";
     signal B : std_logic_vector(3 downto 0) := "0000";
     signal C_i  : std_logic                    := '0';
-    signal S    : std_logic_vector(3 downto 0);
     signal C_o  : std_logic;
+    signal S    : std_logic_vector(3 downto 0);
 
 begin
     dut : FullAdder_4 port map(A => A, B => B, C_i => C_i, C_o => C_o, S => S);
