@@ -21,3 +21,14 @@ begin
         end if;
     end process;
 end Behavioral;
+
+--architecture Structural of T_FF is
+--    component JK_FF is
+--        port (
+--            J, K, CLK : in std_logic;
+--            Q, notQ   : out std_logic);
+--    end component;
+--
+--begin
+--    FF : JK_FF port map(J => T, K => T, CLK => CLK, Q => Q, notQ => notQ);
+--end Structural;

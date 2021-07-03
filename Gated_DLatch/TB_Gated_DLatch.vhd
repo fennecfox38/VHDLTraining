@@ -47,6 +47,9 @@ begin
         D <= '1';
         G <= '0';
         wait for 1 ns;
+        D <= '0';
+        G <= '0';
+        wait for 1 ns;
         wait;
     end process;
 end TestBench;

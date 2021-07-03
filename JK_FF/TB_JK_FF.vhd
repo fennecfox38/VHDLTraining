@@ -26,6 +26,7 @@ begin
         J <= '0'; K <= '1'; wait for 4 ns;
         J <= '1'; K <= '1'; wait for 4 ns;
         J <= '0'; K <= '0'; wait for 4 ns;
+        J <= '1'; K <= '1'; wait for 4 ns;
         wait;
     end process;
 end TestBench;

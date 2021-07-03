@@ -10,6 +10,6 @@ end SRLatch;
 
 architecture DataFlow of SRLatch is
 begin
-    Q    <= R nor notQ after 100 ps;
-    notQ <= S nor Q after 100 ps;
+    Q <= R nor notQ;-- when notQ /= 'U' else R nor '1';
+    notQ <= S nor Q;-- when Q /= 'U' else S nor '0';
 end DataFlow;

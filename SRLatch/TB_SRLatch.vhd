@@ -19,22 +19,22 @@ begin
 
     process begin
         S <= '0';
-        R <= '1';
-        wait for 2 ns;
-        S <= '0';
-        R <= '0';
-        wait for 2 ns;
-        S <= '1';
-        R <= '0';
-        wait for 2 ns;
-        S <= '1';
-        R <= '0';
-        wait for 2 ns;
-        S <= '0';
         R <= '0';
         wait for 2 ns;
         S <= '0';
         R <= '1';
+        wait for 2 ns;
+        S <= '1';
+        R <= '0';
+        wait for 2 ns;
+        S <= '0';
+        R <= '0';
+        wait for 2 ns;
+        S <= '0';
+        R <= '1';
+        wait for 2 ns;
+        S <= '0';
+        R <= '0';
         wait for 2 ns;
         wait;
     end process;

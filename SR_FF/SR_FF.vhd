@@ -28,3 +28,17 @@ begin
         end if;
     end process;
 end Behavioral;
+
+--architecture Structural of SR_FF is
+--    component SRLatch is
+--        port (
+--            S, R    : in std_logic;
+--            Q, notQ : out std_logic
+--        );
+--    end component;
+--    signal P, notP : std_logic;
+--
+--begin
+--    Master: SRLatch port map(S=>(S and not CLK), R=>(R and not CLK), Q=>P, notQ=>notP);
+--    Slave : SRLatch port map(S=>(P and CLK), R=>(notP and CLK), Q=>Q, notQ=>notQ);
+--end Structural;

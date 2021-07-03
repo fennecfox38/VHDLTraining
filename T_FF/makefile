@@ -1,7 +1,7 @@
 GHDL = ghdl
 WAVE = gtkwave
 STD = --std=08
-SRCS = $(notdir $(wildcard *.vhd))
+SRCS = $(notdir $(wildcard *.vhd)) #../JK_FF/JK_FF.vhd ../SRLatch/SRLatch.vhd
 TARGET = TB_T_FF
 STOP = --stop-time=20ns
 
