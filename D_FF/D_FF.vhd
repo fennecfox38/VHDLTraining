@@ -14,9 +14,9 @@ begin
         if (CLK = '1' and CLK'event) then
             Q    <= D;
             notQ <= not D;
-        --else
-        --    Q <= '0' when Q='U';
-        --    notQ <='1' when notQ='U';
+        else
+            Q <= '0' when Q='U';
+            notQ <='1' when notQ='U';
         end if;
     end process;
 end Behavioral;
